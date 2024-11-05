@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../PRESENTACION/CSS/administradorr.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Menú Administrador</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../IMG/diente.jpg" alt="Logo">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name"></span>
+                    <span class="profession">Sitio Web</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-user icon'></i>
+                    <span class="text nav-text">Bienvenido</span>
+                </li>
+
+                <ul class="menu-links">
+                    <!-- Enlaces modificados para usar target directo al iframe -->
+                    <li class="nav-link">
+                        <a href="dashboard.html" target="content-area" id="home-link">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./PHP/gestionusuarios.php" target="content-area" id="gestion-usuarios-link">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Gestión Usuarios</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./PHP/gestioncitas.php" target="content-area" id="gestion-citas-link">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Gestión Citas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./calendar.html" target="content-area" id="gestion-horario-link">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Calendario</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="./PHP/vistaPacientes.php" target="content-area" id="gestion-paciente-link">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Gestión Paciente</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Cerrar Sesión</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modo oscuro</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text">Menú</div>
+        <!-- Contenedor para el contenido dinámico utilizando iframe -->
+        <iframe id="content-area" name="content-area" class="content-area" src="dashboard.html" frameborder="0" style="width: 100%; height: calc(100vh - 60px);"></iframe>
+    </section>
+
+    <script src="../PRESENTACION/JS/administrador.js"></script> <!-- Si necesitas el modo oscuro, mantenlo -->
+</body>
+</html>

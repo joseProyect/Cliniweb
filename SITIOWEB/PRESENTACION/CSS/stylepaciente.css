@@ -1,0 +1,222 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: linear-gradient(to right, #c7f7d0, #b2e2fa);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Título principal */
+h1 {
+    color: #57d0e0;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Botones principales */
+button {
+    background-color: #57d0e0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a1b5;
+}
+
+/* Estilos de la tabla */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Permite scroll horizontal en pantallas pequeñas */
+    -webkit-overflow-scrolling: touch; /* Suaviza el scroll en dispositivos móviles */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #57d0e0;
+}
+
+/* Estilo para los campos de formulario en el modal */
+.modal-content label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.modal-content button {
+    background-color: #57d0e0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #45a1b5;
+}
+
+/* Botón de cancelar en el modal */
+.modal-content button#cancelarAgregar,
+.modal-content button#cancelarEditar {
+    background-color: #d9534f;
+}
+
+.modal-content button#cancelarAgregar:hover,
+.modal-content button#cancelarEditar:hover {
+    background-color: #c9302c;
+}
+
+/* Centrar el contenido de la tabla */
+td, th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Estilo para los inputs de selección de paciente */
+input[type="radio"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    /* Ajuste de la fuente y el espaciado */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Ajuste de tamaño de fuente y padding en la tabla */
+    th, td {
+        font-size: 13px;
+        padding: 10px 5px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajuste de la fuente y el espaciado para pantallas pequeñas */
+    h1 {
+        font-size: 1.3em;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+}

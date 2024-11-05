@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Sonrisas</title>
+    <link rel="stylesheet" href="CSS/StyleHome.css">
+</head>
+<body>
+    <header>
+        <h1>BIENVENIDO AL SITIO WEB - CLÍNICA SONRISAS</h1>
+        <div id="fecha-hoy">HOY: <span id="fecha"></span></div>
+    </header>
+
+    <main>
+        <div class="info-box">
+            <h2>USUARIOS:</h2>
+            <p id="usuarios">00</p>
+        </div>
+        <div class="info-box">
+            <h2>PACIENTES:</h2>
+            <p id="pacientes">00</p>
+        </div>
+        
+        <div class="search-container">
+            <h2>BUSCAR PACIENTE POR DNI</h2>
+            <input type="text" placeholder="Ingrese DNI" id="dni-input">
+            <button onclick="buscarPaciente()">BUSCAR</button>
+        </div>
+        
+        <div class="appointments-container">
+            <h2>PRÓXIMAS CITAS HASTA EL PRÓXIMO VIERNES</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PACIENTE</th>
+                        <th>FECHA</th>
+                        <th>HORA</th>
+                        <th>ESTADO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán las citas dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Contenedor para información del paciente -->
+        <div class="appointments-container" id="paciente-info-container" style="display: none;">
+            <h2>Información del Paciente</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO</th>
+                        <th>PRÓXIMA CITA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="nombre-paciente"></td>
+                        <td id="apellido-paciente"></td>
+                        <td id="cita-paciente"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Asegúrate de que el script se cargue al final del body para que todos los elementos del DOM estén listos -->
+    <script src="JS/dashboard.js"></script>
+</body>
+</html>

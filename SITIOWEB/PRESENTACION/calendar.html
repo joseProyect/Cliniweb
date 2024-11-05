@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Citas</title>
+    <link rel="stylesheet" href="./CSS/calendar.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sección izquierda: formulario editable -->
+        <div id="formSection" class="side-panel">
+            <h2>Editar Cita</h2>
+            <form id="editCitaForm" onsubmit="saveCita(event)">
+                <label for="paciente">Paciente:</label>
+                <input type="text" id="paciente" name="paciente" readonly>
+
+                <label for="doctor">Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <!-- Aquí se llenará con la lista de doctores desde JavaScript -->
+                </select>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+                
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+
+        <!-- Calendario -->
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button class="month-nav" onclick="previousMonth()">❮</button>
+                <div class="month-year-display">
+                    <select id="monthSelect" onchange="changeMonth()">
+                        <option value="0">Enero</option>
+                        <option value="1">Febrero</option>
+                        <option value="2">Marzo</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Mayo</option>
+                        <option value="5">Junio</option>
+                        <option value="6">Julio</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Septiembre</option>
+                        <option value="9">Octubre</option>
+                        <option value="10">Noviembre</option>
+                        <option value="11">Diciembre</option>
+                    </select>
+                    <select id="yearSelect" onchange="changeYear()">
+                        <!-- Los años pueden ser generados dinámicamente con JavaScript -->
+                    </select>
+                </div>
+                <button class="month-nav" onclick="nextMonth()">❯</button>
+            </div>
+
+            <div class="day-names">
+                <div>D</div>
+                <div>L</div>
+                <div>M</div>
+                <div>M</div>
+                <div>J</div>
+                <div>V</div>
+                <div>S</div>
+            </div>
+
+            <div id="calendar-days" class="calendar-days">
+                <!-- Aquí se cargarán las celdas del calendario con las citas -->
+            </div>
+        </div>
+
+        <!-- Sección derecha: información detallada -->
+        <div id="detailsSection" class="side-panel">
+            <h2>Detalles de la Cita</h2>
+            <p><strong>Paciente:</strong> <span id="detailPaciente"></span></p>
+            <p><strong>Doctor:</strong> <span id="detailDoctor"></span></p>
+            <p><strong>Fecha:</strong> <span id="detailFecha"></span></p>
+            <p><strong>Hora:</strong> <span id="detailHora"></span></p>
+            <p><strong>Estado:</strong> <span id="detailEstado"></span></p>
+            <p><strong>Descripción:</strong> <span id="detailDescripcion"></span></p>
+        </div>
+    </div>
+
+    <script src="JS/calendario.js"></script>
+</body>
+</html>

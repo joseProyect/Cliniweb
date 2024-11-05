@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Clínica Sonrisas</title>
+    <link rel="stylesheet" href="./PRESENTACION/CSS/Logn.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <img src="./IMG/logoo.png" alt="Diente sonriente" class="login-image">
+            <h1>Clínica Sonrisas</h1>
+        </div>
+        <div class="login-right">
+            <h2>¡--Inicio Sesión--!</h2>
+            
+            <!-- Contenedor para mostrar mensajes de error -->
+            <div id="error-message" style="color: red; display: none;"></div>
+            
+            <form action="./PRESENTACION/PHP/login.php" method="POST">
+                <div class="input-group">
+                    <input type="text" name="usuario" placeholder="Ingresa tu usuario" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="contrasena" placeholder="Ingresa tu Contraseña" required>
+                    <span class="show-password" onclick="togglePassword()">&#128065;</span>
+                </div>
+                <!-- Nueva sección para seleccionar el rol del usuario -->
+                <div class="input-group">
+                    <select name="rol" required>
+                        <option value="" disabled selected>Selecciona tu rol</option>
+                        <option value="asistente">Asistente</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </div>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript para mostrar/ocultar la contraseña -->
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const passwordIcon = document.querySelector('.show-password');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                passwordIcon.innerHTML = '&#128065;'; // Puedes cambiar el ícono si quieres
+            } else {
+                passwordField.type = 'password';
+                passwordIcon.innerHTML = '&#128065;';
+            }
+        }
+
+        // Captura el mensaje de error desde la URL y lo muestra en el contenedor de errores
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorMessage = urlParams.get('error');
+        if (errorMessage) {
+            const errorDiv = document.getElementById('error-message');
+            errorDiv.textContent = errorMessage;
+            errorDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

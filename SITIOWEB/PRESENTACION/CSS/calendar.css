@@ -1,0 +1,268 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Panel lateral (formulario e información de detalles) */
+.side-panel {
+    width: 25%;
+    background: linear-gradient(to right, #c7f7d0, #b2e2fa);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+.side-panel h2 {
+    color: #1f9bab;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Estilos del formulario */
+#editCitaForm label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+#editCitaForm input, #editCitaForm textarea, #editCitaForm select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #f4f8fb;
+}
+
+/* Botón Guardar */
+#editCitaForm button {
+    background-color: #1f9bab;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#editCitaForm button:hover {
+    background-color: #1d8b9a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#editCitaForm button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado del calendario */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f4f8fb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(55 124 198);
+}
+
+/* Selectores de mes y año centrados */
+.month-year-display {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los selectores de mes y año */
+.month-year-display select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9f3f8;
+    color: #1f9bab;
+    font-size: 1em;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.month-year-display select:hover {
+    background-color: #d9eef4;
+    border-color: #1f9bab;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones de navegación izquierda y derecha */
+.month-nav-left, .month-nav-right {
+    background: #1f9bab;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.month-nav-left:hover, .month-nav-right:hover {
+    background-color: #1d8b9a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.month-nav-left:active, .month-nav-right:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendario */
+.calendar-container {
+    width: 50%;
+    background: linear-gradient(to right, #c7f7d0, #b2e2fa);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Días de la semana */
+.day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding-top: 10px;
+}
+
+/* Celda de día */
+.day-cell {
+    background-color: #f4f8fb;
+    border: 1px solid #2563eb;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 80px;
+    text-align: right;
+    position: relative;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.day-cell.selected {
+    background-color: #1f9bab;
+    color: #fff;
+}
+
+/* Cita en el calendario */
+.cita {
+    background-color: #1f9bab;
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cita:hover {
+    background-color: #1d8b9a;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-panel, .calendar-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .calendar-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .month-year-display {
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    #monthSelect, #yearSelect {
+        font-size: 0.9em;
+        padding: 4px;
+        width: 100px;
+    }
+
+    .day-names {
+        font-size: 0.8em;
+        padding: 5px 0;
+    }
+
+    .calendar-days {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 3px;
+    }
+
+    .day-cell {
+        min-height: 60px;
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .cita {
+        font-size: 0.7em;
+        padding: 3px;
+    }
+}

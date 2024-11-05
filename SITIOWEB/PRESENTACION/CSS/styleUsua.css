@@ -1,0 +1,270 @@
+/* Estilos generales de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+    background: linear-gradient(to right, #c7f7d0, #b2e2fa);
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #57d0e0;
+}
+
+/* Título principal */
+h1 {
+    margin-bottom: 25px;
+    color: #57d0e0;
+    font-size: 1.8em;
+}
+
+/* Botones generales */
+button {
+    margin-bottom: 20px;
+    padding: 12px 25px;
+    background-color: #57d0e0;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: #550a8a;
+}
+
+button i {
+    font-size: 18px;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border: 2px solid #6a0dad;
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ececec;
+    cursor: pointer;
+}
+
+td {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsividad para dispositivos pequeños */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border: 0;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #6a0dad;
+        padding: 10px 0;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #6a0dad;
+        text-transform: uppercase;
+    }
+}
+
+/* Estilos para las acciones con iconos */
+.actions a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.actions a.edit {
+    background-color: #17a2b8;
+}
+
+.actions a.delete {
+    background-color: #dc3545;
+}
+
+.actions a.edit:hover {
+    background-color: #138496;
+}
+
+.actions a.delete:hover {
+    background-color: #c82333;
+}
+
+/* Iconos */
+.actions a i {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* Estilos para el formulario modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 8px 16px rgb(50 157 150);
+    position: relative;
+}
+
+/* Estilo de las etiquetas y campos de entrada */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6a0dad;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #6a0dad;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para las filas del formulario */
+.formulario-fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Estilos para botones dentro del formulario */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cancelar-btn, #guardar-btn {
+    padding: 12px 25px;
+    background-color: #2bdce7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cancelar-btn:hover, #guardar-btn:hover {
+    background-color: #2bdce7;
+}
+
+#cancelar-btn {
+    background-color: #2bdce7;
+}
+
+#guardar-btn {
+    background-color: #2bdce7;
+}
+
+#cancelar-btn:hover {
+    background-color: #2bdce7;
+}
+
+#guardar-btn:hover {
+    background-color: #2bdce7;
+}
+
+/* Estilo del título del formulario */
+h2 {
+    text-align: center;
+    color: #2bdce7;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Estilo específico para la selección de rol */
+select {
+    appearance: none;
+    background: url('ruta/icono-selector.svg') no-repeat right center;
+    padding-right: 30px;
+}

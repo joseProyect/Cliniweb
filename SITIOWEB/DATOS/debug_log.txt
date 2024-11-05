@@ -1,0 +1,43 @@
+Formulario enviado.
+Datos recibidos: Usuario: admin@clinica.com, Rol: administrador.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: admin@clinica.com, Rol: administrador.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: admin@clinica.com, Rol: administrador.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: admin@clinica.com, Rol: administrador.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: jose@gmail.com, Rol: administrador.
+Consulta ejecutada.
+Usuario encontrado: marx
+Formulario enviado.
+Datos recibidos: Usuario: antony@gmail.com, Rol: asistente.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: jose@gmail.com, Rol: administrador.
+Consulta ejecutada.
+Usuario encontrado: marx
+Formulario enviado.
+Datos recibidos: Usuario: jose@gmail.com, Rol: administrador.
+Consulta ejecutada.
+Usuario encontrado: marx
+Formulario enviado.
+Datos recibidos: Usuario: jose@gmail.com, Rol: administrador.
+Consulta ejecutada.
+Usuario encontrado: marx
+Formulario enviado.
+Datos recibidos: Usuario: admin@clinica.com, Rol: doctor.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: 7748294722@untrm.edu.pe, Rol: doctor.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: antony@gmail.com, Rol: doctor.
+Consulta ejecutada.
+Formulario enviado.
+Datos recibidos: Usuario: alex@gmail.com, Rol: doctor.
+Consulta ejecutada.

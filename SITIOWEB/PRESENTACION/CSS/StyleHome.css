@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #c7f7d0, #b2e2fa);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    max-width: 800px;
+    background-color: #556080;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+#fecha-hoy {
+    background-color: #80d4d7;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.info-box, .search-container, .appointments-container {
+    background-color: #76d8de;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #333;
+    text-align: center;
+}
+
+.info-box h2, .search-container h2, .appointments-container h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+}
+
+.info-box p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    width: 70%;
+    margin-right: 5px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.appointments-container {
+    grid-column: span 3;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Estilos para el contenedor de Información del Paciente */
+#paciente-info-container {
+    display: none;
+    background-color: #76d8de;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+#paciente-info-container h2 {
+    font-size: 16px;
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+#paciente-info-container table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#paciente-info-container thead {
+    background-color: #333;
+    color: white;
+}
+
+#paciente-info-container th, #paciente-info-container td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #fecha-hoy {
+        margin-top: 10px;
+    }
+
+    .appointments-container {
+        grid-column: span 1;
+    }
+
+    .info-box, .search-container, .appointments-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .info-box p {
+        font-size: 24px;
+    }
+
+    .search-container input {
+        width: 65%;
+    }
+}

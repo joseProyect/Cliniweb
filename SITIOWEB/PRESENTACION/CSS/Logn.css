@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Algerian", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   background-image: radial-gradient(circle at 100% 0%, #8fffff 0, #89ffff 12.5%, #86ffff 25%, #83f5ff 37.5%, #81dae9 50%, #7ec0cf 62.5%, #7aa9b6 75%, #7594a0 87.5%, #70838c 100%);
+}
+
+.login-container {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-left {
+    width: 50%;
+    background-color: #5ce1e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-left img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.login-left h1 {
+    font-size: 35px;
+    color: #000000;
+    margin-top: 50px;
+}
+
+.login-right {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-right h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #888;
+}
+
+.input-group .show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #22888d;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004aad;
+}
+
+/* Media Queries para hacerlo responsive */
+
+/* Pantallas más pequeñas que 768px (tablets y móviles en horizontal) */
+@media (max-width: 768px) {
+    .login-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .login-left, .login-right {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .login-left img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .login-left h1, .login-right h2 {
+        font-size: 28px;
+    }
+
+    .login-right {
+        padding: 30px 20px;
+    }
+}
+
+/* Pantallas más pequeñas que 480px (móviles en vertical) */
+@media (max-width: 480px) {
+    .login-left img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .login-left h1, .login-right h2 {
+        font-size: 24px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Estilo para el select del rol */
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    color: #333;
+    appearance: none; /* Remueve el estilo predeterminado en algunos navegadores */
+}
